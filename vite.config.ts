@@ -8,7 +8,7 @@ export default defineConfig({
     dts({
       entryRoot: "src",
       include: ["src/components", "src/npm.ts"],
-      skipDiagnostics: true,     // ← 关键：忽略所有 TS 报错
+      // skipDiagnostics: true,     // 忽略所有 TS 报错
       cleanVueFileName: true,
     }),
   ],
@@ -25,4 +25,5 @@ export default defineConfig({
       },
     },
   },
+  base: "/Teddy-UI/",
 });
