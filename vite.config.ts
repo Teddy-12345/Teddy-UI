@@ -1,7 +1,9 @@
 import { defineConfig } from "vite";
-import { webcrypto } from "node:crypto";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import { webcrypto } from "node:crypto";
+
+(globalThis as any).crypto = webcrypto;
 
 export default defineConfig({
     define: {
