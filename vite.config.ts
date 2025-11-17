@@ -1,14 +1,17 @@
-import {defineConfig} from "vite";
+import { defineConfig } from "vite";
+import { webcrypto } from "node:crypto";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
+    define: {
+        crypto: webcrypto,
+    },
     plugins: [
         vue(),
         dts({
             entryRoot: "src",
             include: ["src/components", "src/npm.ts"],
-            // skipDiagnostics: true,     // 忽略所有 TS 报错
             cleanVueFileName: true,
         }),
     ],
@@ -21,7 +24,7 @@ export default defineConfig({
         rollupOptions: {
             external: ["vue"],
             output: {
-                globals: {vue: "Vue"},
+                globals: { vue: "Vue" },
             },
         },
     },
