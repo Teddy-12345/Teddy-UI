@@ -1,0 +1,9 @@
+export { default as TButton } from "./components/Button/Button.vue";
+export { default as TCarousel } from "./components/Carousel/Carousel.vue";
+export { default as TDialog } from "./components/Dialog/Dialog.vue";
+export { default as TInput } from "./components/Input/Input.vue";
+export { default as TMessage } from "./components/Message/Message.vue";
+export { default as TSwitch } from "./components/Switch/Switch.vue";
+export { default as TTab } from "./components/Tab/Tab.vue";
+export { default as TTree } from "./components/Tree/Tree.vue";
+export { default as TWindow } from "./components/Window/Window.vue";

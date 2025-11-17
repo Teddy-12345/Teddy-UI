@@ -1,0 +1,9 @@
+/* 全局禁止拖拽图片和链接 */
+img {
+    pointer-events: auto;
+    -webkit-user-drag: none;
+}
+
+a {
+    -webkit-user-drag: none;
+}
